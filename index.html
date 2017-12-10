@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Sample Philly</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,34 +12,97 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i" rel="stylesheet">
     <script src="/script.js" defer></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <div class="title col-xl-3">
-      <h1><span>Sample Philly</span></h1>
-    </div>
-    <audio id="philly"></audio>
-    <div class="buttonHolder">
-      <a href="#" id= "play_button" class="button play" onclick="PlaySound()"></a>
-    </div>
-    <div class="col-sm-6">
-      <!-- Canvas element where the drum machine is drawn -->
-      <canvas id="screen" width="637px" height="286px"></canvas>
-      <!-- Load the code that runs the drum machine -->
-      <script src="drum-machine.js"></script>
-      
-    </div>
-    
-    <footer>
-      <p>
-        Sample Philly is an application based on <a href="http://monumentlab.muralarts.org/kara-crombie-sample-philly">Kara Crombie’s</a> interactive sculpture in Philadelphia, PA as a part of the city-wide <a href="http://monumentlab.muralarts.org/">Monument Lab</a> project. It aims to honor Philadelphia’s rich musical history by allowing users to produce their own musical compositions from a vast archive of songs recorded in and about the great city of Philadelphia. 
+</head>
 
-      </p>
-      <br>
-      Made with 
-      <a href="https://www.glitch.com">Glitch</a>
+<body>
+    <div class="title col-sm-4">
+        <span><b><i>Sample Philly</i></b></span>
+    </div>
+    <div class="col-sm-offset-1 col-sm-7 tracks">
+        <table class="tg">
+            <tr>
+                <th class="tg-baqh">Track</th>
+                <th class="tg-baqh">Title</th>
+                <th class="tg-baqh">Artist</th>
+                <th class="tg-baqh">Year</th>
+            </tr>
+            <tr>
+                <td class="tg-baqh">1</td>
+                <td class="tg-baqh">Streets of Philadelphia</td>
+                <td class="tg-baqh">Bruce Springsteen</td>
+                <td class="tg-baqh">1994</td>
+            </tr>
+            <tr>
+                <td class="tg-baqh">2</td>
+                <td class="tg-baqh"></td>
+                <td class="tg-baqh"></td>
+                <td class="tg-baqh"></td>
+            </tr>
+            <tr>
+                <td class="tg-baqh">3</td>
+                <td class="tg-baqh"></td>
+                <td class="tg-baqh"></td>
+                <td class="tg-baqh"></td>
+            </tr>
+            <tr>
+                <td class="tg-baqh">4</td>
+                <td class="tg-baqh"></td>
+                <td class="tg-baqh"></td>
+                <td class="tg-baqh"></td>
+            </tr>
+            <tr>
+                <td class="tg-baqh">5</td>
+                <td class="tg-baqh"></td>
+                <td class="tg-baqh"></td>
+                <td class="tg-baqh"></td>
+            </tr>
+            <tr>
+                <td class="tg-baqh">6</td>
+                <td class="tg-baqh"></td>
+                <td class="tg-baqh"></td>
+                <td class="tg-baqh"></td>
+            </tr>
+            <tr>
+                <td class="tg-baqh">7</td>
+                <td class="tg-baqh"></td>
+                <td class="tg-baqh"></td>
+                <td class="tg-baqh"></td>
+            </tr>
+            <tr>
+                <td class="tg-baqh">8</td>
+                <td class="tg-baqh"></td>
+                <td class="tg-baqh"></td>
+                <td class="tg-baqh"></td>
+            </tr>
+        </table>
+    </div>
+
+    <audio id="philly"></audio>
+    <div class="col-sm-5">
+        <div class="buttonHolder">
+            <a href="#" id="play_button" class="button play" onclick="PlaySound()"></a>
+        </div>
+
+    </div>
+
+    <div class="col-sm-7 drum" style="padding-left: 55px">
+        <!-- Canvas element where the drum machine is drawn -->
+        <canvas id="screen" width="637px" height="286px" style=""></canvas>
+        <!-- Load the code that runs the drum machine -->
+        <script src="drum-machine.js"></script>
+
+    </div>
+
+    <footer>
+        <p>
+            Sample Philly is an application based on <a href="http://monumentlab.muralarts.org/kara-crombie-sample-philly">Kara Crombie’s</a> interactive sculpture in Philadelphia, PA as a part of the city-wide <a href="http://monumentlab.muralarts.org/">Monument Lab</a> project. It aims to honor Philadelphia’s rich musical history by allowing users to produce their own musical compositions from a vast archive of songs recorded in and about the great city of Philadelphia.
+
+        </p> Made with
+        <a href="https://www.glitch.com">Glitch</a>
     </footer>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>
