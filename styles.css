@@ -2,21 +2,30 @@
 
 * {
     font-family: 'Noto Serif', serif;
+    background-color: #b7b7b7;
 }
+
+body {}
 
 h1 {
     text-align: center;
     font-size: 5em;
+    background-color: white;
 }
 
 .title {
-    font-size: 4em;
+    background-color: white;
+    font-size: 3.5em;
     border: 10px solid #ff6a39;
     position: fixed;
     text-align: center;
     top: 0;
     width: 25%;
     z-index: 100;
+}
+
+.title * {
+    background-color: white;
 }
 
 footer {
@@ -31,8 +40,11 @@ footer {
 
 /* Play button */
 
+.buttons {}
+
 .buttonHolder {
     text-align: center;
+    padding-top: 190px;
 }
 
 .button {
@@ -72,6 +84,28 @@ footer {
     text-shadow: 0px 0px 6px #83d244;
 }
 
+.rewind:after {
+    content: "⏎";
+    left: 21px;
+    top: 21px;
+}
+
+.rewind:hover:after {
+    color: #f94e66;
+    text-shadow: 0px 0px 6px #f94e66;
+}
+
+.stop:after {
+    content: "◼";
+    left: 21px;
+    top: 21px;
+}
+
+.stop:hover:after {
+    color: black;
+    text-shadow: 0px 0px 6px grey;
+}
+
 .button:active {
     background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
     background-image: linear-gradient(top, #efedec, #f7f4f4);
@@ -83,10 +117,10 @@ footer {
     text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
 }
 
+
 /* Track list table */
-.tracks {
-    
-}
+
+.tracks {}
 
 .tg {
     width: 96%;
@@ -131,4 +165,96 @@ footer {
     padding-left: 15px;
     text-align: left;
     vertical-align: top
+}
+
+
+/* Range controllers */
+
+.control-group .knobs {
+    display: flex;
+    height: 100%;
+    padding: 10px;
+}
+
+.control-group label {
+    text-align: center;
+}
+
+.control-group .label-text {
+    color: #d1c8be;
+}
+
+.knobs {
+    padding-top: 75px;
+}
+
+
+/*
+ * Inputs and other things
+ */
+
+input[type=range] {
+    height: 40px;
+    -webkit-transform: rotate(-90deg) translateX(-50px);
+    transform: rotate(-90deg) translateX(-50px);
+    -webkit-appearance: none;
+    margin: 10px 0;
+    background-color: #515459;
+    background: -webkit-repeating-linear-gradient(left, #d1c8be, #d1c8be 1px, transparent 1px, transparent 1em);
+    background: repeating-linear-gradient(90deg, #d1c8be, #d1c8be 1px, transparent 1px, transparent 1em);
+    cursor: ns-resize;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-moz-focus-outer {
+    border: 0;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: black;
+    border-radius: 5px;
+    margin-left: -5px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    margin-top: -14px;
+    position: relative;
+    height: 40px;
+    width: 15px;
+    border-radius: 2px;
+    cursor: ns-resize;
+    -webkit-appearance: none;
+    margin-top: -15px;
+    box-shadow: 1px 0px 1px 0px rgba(0, 0, 0, 0.75);
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 46%, #d1c8be 47%, rgba(255, 255, 255, 0) 53%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 46%, #d1c8be 47%, rgba(255, 255, 255, 0) 53%);
+    background-color: #433325;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: black;
+    border-radius: 5px;
+    margin-left: -5px;
+}
+
+input[type=range]::-moz-range-thumb {
+    position: relative;
+    height: 40px;
+    width: 15px;
+    border-radius: 2px;
+    cursor: ns-resize;
+    -webkit-appearance: none;
+    margin-top: -15px;
+    box-shadow: 1px 0px 1px 0px rgba(0, 0, 0, 0.75);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 46%, #d1c8be 47%, rgba(255, 255, 255, 0) 53%);
+    background-color: #433325;
 }

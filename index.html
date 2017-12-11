@@ -15,10 +15,27 @@
 </head>
 
 <body>
-    <div class="title col-sm-4">
-        <span><b><i>Sample Philly</i></b></span>
+    <div class="col-sm-4">
+        <div class="title">
+            <span><b><i>Sample Philly</i></b></span>
+        </div>
+        
+            <audio id="philly"></audio>
+        <div class="buttonHolder">
+            <a href="#" id="play_button" class="button play" onclick="PlaySound()"></a>
+            <a href="#" class="button rewind" class="button rewind" onclick="Restart()"></a>
+            <a href="#" class="button stop" class="button stop" onclick="Stop()"></a>
+        </div>
+
+
     </div>
-    <div class="col-sm-offset-1 col-sm-7 tracks">
+    <div class="col-sm-1">
+        <br>
+        <p>
+        Load Track
+        </p>
+    </div>
+    <div class="col-sm-7 tracks">
         <table class="tg">
             <tr>
                 <th class="tg-baqh">Track</th>
@@ -77,14 +94,25 @@
         </table>
     </div>
 
-    <audio id="philly"></audio>
+
     <div class="col-sm-5">
-        <div class="buttonHolder">
-            <a href="#" id="play_button" class="button play" onclick="PlaySound()"></a>
+        <div class="knobs" style="text-align: center">
+            <label for="cutoff">
+                <div class="label-text">FREQUENCY</div>
+                <input class="freq-slider" type="range" name="cutoff" id="cutoff" value="10000" max="10000">
+            </label>
+
+            <label for="resonance">
+                <div class="label-text">RESONANCE</div>
+                <input type="range" class="gain-slider" name="resonance" id="resonance" value="0" max="50">
+            </label>
+
+            <label for="volume" alt="Output volume">
+                <div class="label-text">VOLUME</div>
+                <input type="range" name="volume" id="volume" max="100" value="50">
+            </label>
         </div>
-
     </div>
-
     <div class="col-sm-7 drum" style="padding-left: 55px">
         <!-- Canvas element where the drum machine is drawn -->
         <canvas id="screen" width="637px" height="286px" style=""></canvas>
@@ -101,6 +129,7 @@
         <a href="https://www.glitch.com">Glitch</a>
     </footer>
 
+    <script src="/client.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>

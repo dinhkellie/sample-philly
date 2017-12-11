@@ -246,7 +246,7 @@ function drawTracks(screen, data) {
       drawButton(screen,
                  column,
                  row,
-                 on ? track.color : "lightgray");
+                 on ? track.color : "white");
     });
   });
 };
