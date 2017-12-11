@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="col-sm-4">
+    <div class="col-sm-4 header">
         <div class="title">
             <span><b><i>Sample Philly</i></b></span>
         </div>
@@ -23,8 +23,8 @@
             <audio id="philly"></audio>
         <div class="buttonHolder">
             <a href="#" id="play_button" class="button play" onclick="PlaySound()"></a>
-            <a href="#" class="button rewind" class="button rewind" onclick="Restart()"></a>
-            <a href="#" class="button stop" class="button stop" onclick="Stop()"></a>
+            <a href="#" class="button rewind" onclick="Restart()"></a>
+            <a href="#" class="button stop" onclick="Stop()"></a>
         </div>
 
 
@@ -32,8 +32,11 @@
     <div class="col-sm-1">
         <br>
         <p>
-        Load Track
+        <u>Load Track</u>
         </p>
+      <div class="tooltip">Hover over me
+        <span class="tooltiptext">Tooltip text</span>
+      </div>
     </div>
     <div class="col-sm-7 tracks">
         <table class="tg">
